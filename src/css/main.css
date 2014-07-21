@@ -1,0 +1,55 @@
+body {
+  font-family: "Verdana"; }
+
+h1, h2, h3, h4 {
+  text-align: center; }
+
+#gameboard {
+  background-color: darkgray;
+  height: 440px;
+  position: relative; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+#controlPanel {
+  border-bottom: 3px solid lightgray;
+  text-align: center; }
+
+#controlPanel span {
+  margin-right: 20px; }
+
+#controlPanel button {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  outline: none; }
+
+#bottomPanel {
+  border-top: 3px solid lightgray;
+  text-align: center; }
+
+#bottomPanel button {
+  padding: 10px;
+  display: inline-block;
+  outline: none;
+  font-size: 1rem;
+  font-family: "Verdana";
+  color: #404040;
+  background-color: lightgray; }
+
+#bottomPanel button:active {
+  background-color: #404040;
+  color: lightgray; }
+
+#controlPanel, #bottomPanel {
+  background-color: darkgray;
+  padding: 10px 30px;
+  font-size: 1rem;
+  font-family: "Verdana"; }
+
+#gameboard, #controlPanel, #bottomPanel {
+  width: 440px;
+  margin: 0 auto;
+  box-sizing: border-box; }

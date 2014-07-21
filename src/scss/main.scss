@@ -1,0 +1,84 @@
+//Sizes
+$tileLength: 30px;
+$padding: 10px;
+$boardSize: ($tileLength * 14) + ($padding * 2);
+
+//Colors
+$gameBoardColor: darkgray;
+
+//Fonts
+$primaryFont: 'Verdana';
+$primaryFontSize: 1rem;
+
+body {
+    font-family: $primaryFont;
+}
+
+h1, h2 , h3, h4 {
+    text-align: center;
+}
+
+#gameboard {
+    @extend %centeredPanel;
+    background-color: $gameBoardColor;
+    height: $boardSize;
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#controlPanel {
+    @extend %centeredPanel;
+    @extend %panel;
+    border-bottom: 3px solid lightgray;
+    text-align: center;
+}
+
+#controlPanel span {
+    margin-right: 20px;
+}
+
+#controlPanel button {
+    width: $tileLength;
+    height: $tileLength;
+    display: inline-block;
+    outline: none;
+}
+
+#bottomPanel {
+    @extend %centeredPanel;
+    @extend %panel;
+    border-top: 3px solid lightgray;
+    text-align: center;
+}
+
+#bottomPanel button {
+    padding: 10px;
+    display: inline-block;
+    outline: none;
+    font-size: $primaryFontSize;
+    font-family: $primaryFont;
+    color: #404040;
+    background-color: lightgray;
+}
+
+#bottomPanel button:active {
+    background-color: #404040;
+    color: lightgray;
+}
+
+%panel {
+    background-color: $gameBoardColor;
+    padding: $padding 30px;
+    font-size: $primaryFontSize;
+    font-family: $primaryFont;
+}
+
+%centeredPanel {
+    width: $boardSize;
+    margin: 0 auto; 
+    box-sizing: border-box;
+}
